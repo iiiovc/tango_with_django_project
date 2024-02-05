@@ -5,26 +5,23 @@
 <html>
 
     <head>
-        <title>Rango - about</Rango-about></title>
+        <title>Rango - about</title>
     </head>
 
     <body>
-        <h1>Rango says here is the about page.</h1>
+        <h1>Rango says...</h1>
+
         <div>
+            here is the about page. <br />
             This tutorial has been put together by Jing Zhang.
             <strong>{{ boldmessage }}</strong><br />
         </div>
-        
-        <div>
-            <a href="{% url 'rango:index' %}">Index</a><br />
-            <img src="{% static 'images/rango.jpg' %}"
-                 alt="Picture of Rango" />
-        </div>
 
-        </div>
-            <img src="/media/cat.jpg" 
-                 alt="Picture of a Cat">
-        </div>
+        <a href="/rango/">Index</a><br />
+        <img src="{% static 'images/rango.jpg' %}" alt="Picture of Rango" />
+        <img src="{{ MEDIA_URL }}cat.jpg" alt="Picture of a Cat." />
+
+        
     </body>
 
 </html>
